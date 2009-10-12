@@ -1,0 +1,15 @@
+sfMongoDBCachePlugin
+A reliable and shared cache system for your symfony project. 
+
+This allows symfony to use a Mongo database to store its cache.
+
+To use it, just edit the factories.yml in your application configuration directory:
+
+view_cache:
+  class: sfMongoDBCache
+  param:
+    automatic_cleaning_factor: 0
+    host: localhost
+    port: 27017
+    database: my_application_cache
+    collection: sf_cache
