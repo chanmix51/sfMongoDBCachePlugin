@@ -1,4 +1,9 @@
 <?php
+/* This is free software
+ *
+ * Copyright 2009 - Grégoire HUBERT <hubert.greg@gmail.com>
+ * See the LICENSE file coming with this package
+ */
 
 class sfMongoDBCache extends sfCache
 {
