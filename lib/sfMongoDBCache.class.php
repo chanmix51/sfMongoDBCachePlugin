@@ -30,16 +30,16 @@ class sfMongoDBCache extends sfCache
   public function initialize($options = array())
   {
     if (!class_exists('Mongo'))
-    {   
-      throw new sfInitializationException(sprintf('the mongodb extension is not installed or enable, cannot use sfMongoDbCache.'));
-    }   
+    {
+      throw new sfInitializationException(sprintf('the mongodb extension is not installed or enabled, cannot use sfMongoDbCache.'));
+    }
 
     parent::initialize($options);
 
     if (!$this->hasOption('database'))
-    {   
+    {
       throw new sfInitializationException(sprintf('You must provide a database name to store the cache in'));
-    }   
+    }
     $this->database = $this->getOption('database');
 
     foreach (array('host', 'port', 'collection') as $option)
